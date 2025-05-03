@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: var(--bg-color, #fff);
+    color: var(--text-color, #000);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  button, select {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #007bffc0;
+    color: white;
+  }
+  
+  #rocket {
+    width: 100px;
+    transition: transform 1s ease;
+  }
+  
+  .launching {
+    animation: flyUp 1s ease forwards;
+  }
+  
+  @keyframes flyUp {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-300px) scale(1.2);
+    }
+  }
+  
+  /* Theme Variables */
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  body.dark {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+  }
+  
